@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS";
+    text-decoration: none;
+    list-style-type: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f0f9f9;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #134e0e;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #22df22;
+}
+body{
+    background-color: #fff9;
+    position: absolute;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.navbar{
+    background-color: #3bcc3b83;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+}
+.liste{
+    margin-left: 100px;
+}
+.liste a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 17px;
+    transition: all .3s ease-in-out;
+}
+.liste a:hover{
+    color: #003;
+}
+.boutton{
+    margin-right: 120px;
+    transition: all .2s ease-in-out;
+}
+.boutton:hover{
+    transform: scale(1.2);
+}
+.boutton a{
+    font-size: 17px;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+.boutton a:hover{
+    color: #26da26;
+    border: #26da26 1px solid;
+    border-radius: 50px;
+    padding: 2px 20px;
+    background-color: #fff;
+}
+
+/* ..................... MODALE ....................... */
+.modale .contenu p,a{
+    font-size: 17px;
+    line-height: 1.3;
+}
+.modale .contenu img{
+    width: 95px;
+}
+.modale{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(00,00,00,.9);
+    z-index: 3;
+    justify-content: center;
+    align-items: center ;
+}
+.modale:target{
+    visibility: visible;
+    opacity: 1;
+}
+.close{
+    position: absolute;
+    right: 20px;
+    top: -1px;
+    text-decoration: none;
+    color: gray;
+    font-size: 50px;
+    transition: .3s ;
+}
+.close:hover{
+    color: #eb2b2b;
+    font-weight: 900;
+}
+
+.contenu{
+    margin: 90px auto;
+    background-color: #fff;
+    padding: 1.5em 2em;
+    width: 500px;
+    max-width: 90%;
+    border-radius: 20px;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+    box-shadow: 0 0 35px black;
+}
+
+.ktk{
+    text-decoration: none;
+    color: #2794c7;
+    transition: .5s;
+    transition: 0s ease-out;
+}
+.ktk:hover{
+    color: #4e1dc9;
+    text-decoration: underline;
+}
+
+.inscrire{
+    text-decoration: none;
+    color: #fff;
+    background: #2794c7;
+    padding: 8px 45px;
+    border-radius: 40px;
+    align-items: center;
+    transition:  .3s;
+    transition: 0s ease-out;
+}
+.inscrire:hover{
+    background: #fff;
+    color: #2794c7;
+    border: 1px solid #2794c7;
+}
+
+/* ....................... SECTION ACCEUIL .............. */
+#acceuil{
+    background: url(Ressources/Images/Sans\ titre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.container{
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cartes{
+    width: auto;
+    background-color: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    margin: 20px;
+    transition: all .3s ease-in-out;
+}
+.cartes-content{
+    padding: 16px;
+}
+.cartes-content h3{
+    text-align: center;
+    font-size: 250px;
+    margin-bottom: 8px;
+    color: #31b631;
+}
+.cartes-content p{
+    text-align: center;
+    color: #666;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 400;
+    margin-top: -50px;
+}
+
+
+
+/* .................... SECTION PARTICULIER  ............. */
+.conteneur{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.carte{
+    width: 355px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    margin: 20px;
+    transition: all .3s ease-in-out;
+}
+.carte:hover{
+    transform: scale(1.1);
+}
+.carte img{
+    width: 100%;
+    height: 250px;
+}
+.contenue{
+    padding: 16px;
+    cursor: pointer;
+}
+.contenue h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #26da26;
+}
+.contenue p{
+    color: #666;
+    font-size: 15px ;
+    line-height: 1.3;
+    font-weight: 400;
+}
+.contenue a{
+    color: #26da26;
+    border: 1px solid #26da26;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    padding: 10px;
+    margin-top: 20px;
+}
+.contenue a:hover{
+    color: #fff;
+    background-color: #26da26;
+}
+
+/* .......................... SECTION MISSION ET OBJECTIF .................. */
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 350px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    margin: 20px;
+    transition: all .3s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card img{
+    width: 100%;
+    height: 250px;
+}
+.card-content{
+    padding: 16px;
+}
+.card-content h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #26da26;
+}
+.card-content p{
+    color: #666;
+    font-size: 15px ;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+/* .............................. SECTION ADRESSE/CONTACTS ................... */
+#contacte{
+    width: 100%;
+    height: 60vh;
+    background: #000;
+}
+.connteneur{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.connteneur .cartte{
+    background: #000;
+    display: flex;
+    margin: 40px;
+}
+.connteneur .cartte .image1 img{
+    width: 50px;
+    padding: 0 20px;
+    margin-top: -8px;
+}
+.connteneur .cartte .image2 img{
+    width: 50px;
+    padding: 0 20px;
+    margin-top: -10px;
+}
+
+.paragraphe1 h3 {
+    color: #2ba02b;
+    font-size: 22px;
+    font-weight: 800;
+}
+.paragraphe1 h4 {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+.paragraphe1 p {
+    color: gray;
+    font-size: 15px;
+    font-weight: 800;
+}
+.paragraphe1 a{
+    color: #3082d5;
+    transition: .2s;
+}
+.paragraphe2 a{
+    color: #3082d5;
+    transition: .2s;
+}
+.paragraphe2 a:hover{
+    color: #4e1dc9;
+    text-decoration: underline;
+}
+.paragraphe1 a:hover{
+    color: #4e1dc9;
+    text-decoration: underline;
+}
+.paragraphe2 h3 {
+    color: #2ba02b;
+    font-size: 22px;
+    font-weight: 800;
+}
+.paragraphe2 h4 {
+    margin-top: 2px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+.paragraphe2 p {
+    color: gray;
+    font-size: 15px;
+    font-weight: 800;
+}
+.paragraphe1 .num:hover , .paragraphe2 .num:hover{
+    text-decoration: underline;
+}
+#footer{
+    background: #22df22;
+    height: 25px;
+    width: 100%;
+}
+.footer p{
+    text-align: center;
+    color: #003;
+    font-weight: 900;
+    font-size: 15px;
+}
+.footer a{
+    color: #f0f9f9;
+    transition: all .3s ease-in-out;
+}
+.footer a:hover{
+    color: #4e1dc9;
+    text-decoration: underline;
+}
+.section_titre{
+    padding: 40px;
+    text-align: center;
+}
+.section_titre .h1{
+    text-decoration: overline;
+}
+.section_titrecon{
+    padding: 40px;
+    text-align: center;
+}
+.section_titrecon .h1{
+    text-decoration: overline;
+    color: #fff;
+}
+
