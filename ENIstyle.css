@@ -48,6 +48,7 @@ header{
     width: 100%;
 }
 .liste{
+    position: absolute;
     margin-left: 100px;
 }
 .liste a{
@@ -81,6 +82,119 @@ header{
     transform: scale3d(1.2);
 }
 /* ........................................ BAR DE NAVIGATION (en HAUT)............................ */
+
+
+/* ........................................ BAR DE NAVIGATION RESPONSIVE (en BAS)............................ */
+
+.slider_content{
+    margin-top: 5px;
+}
+
+.slider {
+    display: none;
+    transform: translate(-280px);
+    position:relative;
+    height: 100vh;
+    width: 280px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: .5s;
+    z-index: 1;
+    top: 284px;
+}
+.slider h1{
+    margin-top: 70px;
+    margin-left: 15px;
+    color: #31b631;
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.slider a{
+    color: #31b631;
+    font-weight: 900;
+    font-size: 20px;
+    padding: 20px;
+    transition: .5s;
+}
+.slider a:hover{
+    background-color: #31b631;
+    color: #fff;
+}
+.listes{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    display: none;
+    visibility: hidden;
+}
+.toggle{
+    display: none;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    top: 10px;
+    left: 15px;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: .3s ease;
+}
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    width: 10px;
+    transform: translate(-50%,-50%);
+}
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .bottom_line{
+    top: 70%;
+    width: 10px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top_line{
+    background: #31b631;
+    height: 3px;
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line{
+    background: #31b631;
+    height: 3px;
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    left: 14px;
+    top: 0;
+    width: 25px;
+}
+input:checked ~ .slider{
+    transform: translate(0);
+}
+/* ........................................ BAR DE NAVIGATION RESPONSIVE (en HAUT)............................ */
+
+
 
 /* ........................................ FENETRE MODALE (en BAS)....................... */
 .modale{
@@ -419,3 +533,14 @@ header{
     color: #fff;
 }
 
+
+
+/* ......................... RESPONSIVE ....................... */
+@media (max-width:900px){
+    header .liste{
+        display: none;
+    }
+    .toggle{
+        display: block;
+    }
+}
