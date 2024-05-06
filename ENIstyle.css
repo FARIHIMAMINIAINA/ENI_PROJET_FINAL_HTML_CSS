@@ -227,7 +227,6 @@ input:checked ~ .slider{
     text-decoration: none;
     color: gray;
     font-size: 50px;
-    transition: .3s ;
 }
 .close:hover{
     color: #eb2b2b;
@@ -251,7 +250,6 @@ input:checked ~ .slider{
 .ktk{
     text-decoration: none;
     color: #31b631ad;
-    transition: .2s ease-in;
 }
 .ktk:hover{
     color: #31b631;
@@ -288,7 +286,7 @@ input:checked ~ .slider{
 
 .container{
     position: relative;
-    margin-top: 100px;
+    margin-top: 130px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -298,7 +296,7 @@ input:checked ~ .slider{
     background-color: transparent;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 0px 15px rgba(0,0,0,5);
+    box-shadow: 0px 0px 15px rgba(0,0,0,.5);
     margin: 20px;
     transition: all .3s ease-in-out;
 }
@@ -341,7 +339,6 @@ input:checked ~ .slider{
 }
 .card:hover{
     transform: scale(1.1);
-    background: #000;
 }
 .card img{
     width: 100%;
@@ -381,7 +378,6 @@ input:checked ~ .slider{
 }
 .carte:hover{
     transform: scale(1.1);
-    background: #000;
 }
 .carte img{
     width: 100%;
@@ -412,7 +408,8 @@ input:checked ~ .slider{
 }
 .contenue a:hover{
     color: #fff;
-    background-color: #26da26;
+    border: 1px solid #26da26a4;
+    background-color: #26da26a4;
 }
 /* ........................................ SECTION PARTICULIER (en HAUT) ............. */
 
