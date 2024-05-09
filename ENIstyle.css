@@ -8,10 +8,7 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    background-color: #fff9;
-    position: absolute;
-}
+
 
 /* ........................................ SCROLL BAR (en BAS)............................ */
 
@@ -20,7 +17,7 @@ body{
     background-color: #f0f9f9;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #134e0e;
+    background-color: #186911;
     border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover{
@@ -91,7 +88,6 @@ header{
 }
 
 .slider {
-    display: none;
     transform: translate(-280px);
     position:relative;
     height: 100vh;
@@ -275,7 +271,7 @@ input:checked ~ .slider{
 
 /* ........................................ SECTION ACCEUIL (en BAS).............. */
 #acceuil{
-    background: url(Ressources/Images/Sans\ titre.png);
+    background: url(Ressources/Images/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -286,7 +282,7 @@ input:checked ~ .slider{
 
 .container{
     position: relative;
-    margin-top: 130px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -296,32 +292,47 @@ input:checked ~ .slider{
     background-color: transparent;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 0px 15px rgba(0,0,0,.5);
-    margin: 20px;
     transition: all .3s ease-in-out;
 }
 .cartes-content{
     padding: 16px;
+    text-align: center;
 }
 .cartes-content h3{
+    text-shadow: 0px 0px 15px rgba(0,0,0,.5);
     text-align: center;
     font-size: 250px;
     margin-bottom: 8px;
-    color: #31b631;
+    color: #fff;
 }
 .cartes-content p{
-    text-align: center;
-    color: #666;
+    text-shadow: 15px 0px 15px rgba(0,0,0,1);
+    color: #f4f4f4;
     font-size: 20px;
     line-height: 1.3;
     font-weight: 400;
     margin-top: -50px;
+}
+.cartes-content .lien{
+    box-shadow: 0px 0px -15px rgba(0,0,0,.3);
+    border: #fff 1px solid;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 50px;
+}
+.cartes-content .lien a{
+    color: #fff;
+    margin-top: 20px;
+    transition: .2s;
 }
 /* ........................................ SECTION ACCEUIL (en HAUT).............. */
 
 
 
 /* ........................................ SECTION MISSION ET OBJECTIF (en BAS) .................. */
+#mission{
+    height: 180vh;
+}
 .card-container{
     display: flex;
     justify-content: center;
@@ -358,9 +369,80 @@ input:checked ~ .slider{
     line-height: 1.3;
     font-weight: 400;
 }
+
+.slide{
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+.slideshow{
+    border-radius: 7px;
+    position: absolute;
+    width: 350px;
+    margin: auto;
+    overflow: hidden;
+}
+.slideshow ul{
+    position: relative;
+    left: 0;
+    width: 2500px;
+    transition: left .3s linear;
+    animation: slide 15s infinite;
+}
+.slideshow ul li{
+    display: inline-block;
+    height: auto;
+    float: left;
+    width: 350px;
+}
+.single-img{
+    width: 350px;
+    padding: 0;
+    margin: 0;
+}
+.single-img img{
+    width: 100%;
+}
+
+@keyframes slide{
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -350px;
+    }
+    45%{
+        left: -350px;
+    }
+    50%{
+        left: -700px;
+    }
+    70%{
+        left: -700px;
+    }
+    75%{
+        left: -350px;
+    }
+    98%{
+        left: -350px;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+
 /* ........................................ SECTION MISSION ET OBJECTIF (en HAUT) .................. */
 
 /* ........................................ SECTION PARTICULIER (en BAS) ............. */
+#part{
+    background-image: url(Ressources/Images/Background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .conteneur{
     display: flex;
     justify-content: center;
@@ -385,7 +467,6 @@ input:checked ~ .slider{
 }
 .contenue{
     padding: 16px;
-    cursor: pointer;
 }
 .contenue h3{
     font-size: 28px;
@@ -416,8 +497,9 @@ input:checked ~ .slider{
 
 /* ........................................ SECTION ADRESSE/CONTACTS (en BAS) ................... */
 #contacte{
+    margin-top: -38px;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     background: #000;
 }
 .connteneur{
@@ -493,25 +575,6 @@ input:checked ~ .slider{
     font-weight: 800;
 }
 .paragraphe1 .num:hover , .paragraphe2 .num:hover{
-    text-decoration: underline;
-}
-#footer{
-    background: #22df22;
-    height: 25px;
-    width: 100%;
-}
-.footer p{
-    text-align: center;
-    color: #003;
-    font-weight: 900;
-    font-size: 15px;
-}
-.footer a{
-    color: #f0f9f9;
-    transition: all .3s ease-in-out;
-}
-.footer a:hover{
-    color: #4e1dc9;
     text-decoration: underline;
 }
 .section_titre{
